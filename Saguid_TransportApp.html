@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waypoint - Transportation App</title>
+</head>
+<body>
+    <header>
+        <h1>Waypoint</h1>
+        <p><em>Your trusted transportation partner</em></p>
+        <nav>
+            <a href="#book">Book a Ride</a> | 
+            <a href="#fleet">Our Vehicles</a> | 
+            <a href="#map">Map</a> | 
+            <a href="#media">Media</a> | 
+            <a href="#schedule">Schedule</a> | 
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    </hr>
+
+    <main>
+        <hr>
+        <section id="book">
+            <h2>Book a Ride</h2>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Trip Details</legend>
+                    <p>
+                        <label for="Full name">Full name</label>
+                        <input type="text" id="Full name" name="Full name" required placeholder="Enter your full name">
+                    </p>
+                    <p>
+                        <label for="Phone number">Phone number</label>
+                        <input type="tel" id="Phone number" name="Phone number" required placeholder="Enter your phone number">
+                    </p>
+                    <p>
+                        <label for="Email">Email</label>
+                        <input type="email" id="Email" name="Email" required placeholder="Enter your email address">
+                    </p>
+                    <p>
+                        <label for="Pick-up and Drop-off location">Pick-up and Drop-off location:</label>
+                        <input type="text" id="Pick-up and Drop-off location" name="Pick-up and Drop-off location" list="places" required placeholder="Enter your pick-up and drop-off locations">
+                    <datalist id="places">
+                        <option value="Central Terminal"></option>
+                        <option value="City Hall"></option>
+                        <option value="Airport"></option>
+                        <option value="University Campus"></option>
+                        <option value="Public Market"></option>
+                    </datalist>
+                    <p>
+                        <label for="Date">Date:</label>
+                        <input type="date" id="Date" name="Date" required>
+                        <label for="Time">Time:</label>
+                        <input type="time" id="Time" name="Time" required>
+                    </p>
+                    <p>
+                        <label for="passengers">Passengers:</label>
+                        <input type="number" id="passengers" name="passengers" min="1" max="10" value="1">
+                    </p>
+                    <p>
+                        <label for="Vehicle">Vehicle:</label>
+                        <select id="Vehicle" name="Vehicle" required>
+                            <option value="">Select a vehicle</option>
+                            <option value="Taxi">Taxi</option>
+                            <option value="Van">Van</option>
+                            <option value="Motorcycle Taxi">Motorcycle Taxi</option>
+                            <option value="Tricycle">Tricycle</option>
+                        </select>
+                    </p>
+                        <legend>Payment method:</legend>
+                        <p>
+                            <input type="radio" id="payment-cash" name="payment-method" value="cash" checked>
+                            <label for="payment-cash">Cash</label>
+                        </p>
+                        <p>
+                            <input type="radio" id="payment-card" name="payment-method" value="card">
+                            <label for="payment-card">Card</label>
+                        </p>
+                        <p>
+                            <input type="radio" id="payment-ewallet" name="payment-method" value="e-wallet">
+                            <label for="payment-ewallet">E-Wallet</label>
+                        </p>
+                        <legend>Extras</legend>
+                        <p>
+                            <input type="checkbox" id="extra-luggage" name="extras" value="extra-luggage">
+                            <label for="extra-luggage">Extra luggage</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="child-seat" name="extras" value="child-seat">
+                            <label for="child-seat">Child seat</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="wheelchair-accessible" name="extras" value="wheelchair-accessible">
+                            <label for="wheelchair-accessible">Wheelchair accessible</label>
+                        </p>
+                    <p>
+                        <label for="driver-notes">Notes for the driver:</label>
+                        <textarea id="driver-notes" name="driver-notes" rows="4" cols="50" placeholder="Add any notes for your driver"></textarea>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the <a href="#">terms and conditions</a>.</label>
+                    </p>
+                    <p>
+                        <button type="submit">Book Now</button>
+                        <button type="reset">Clear</button>
+                    </p>
+                </fieldset>
+            </form>
+        </section>
+        <hr>
+        <section id="fleet">
+            <h2>Our Vehicles</h2>
+            <p>We offer a variety of vehicles to suit your needs:</p>
+            <figure>
+                <img alt="Our awesome taxi" src="https://www.cityguideny.com/columnpic/ndnyc-taxi.jpg" alt="Taxi ready for an urban passenger trip" width="800" height="533">
+                <figcaption><strong>Taxi</strong> - Comfortable and convenient for solo travelers or small groups.</figcaption> 
+            </figure>
+                <small>our awesome taxi</small>
+                <hr>
+            <figure>
+                <img alt="Our comfortable van" src="https://upload.wikimedia.org/wikipedia/commons/1/1a/2018_Ford_Transit_Custom_300_Base_2.0_facelift.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original" alt="Passenger van suited to group travel" width="800" height="533">
+                <figcaption><strong>Van</strong> - Spacious seating and luggage room for families or larger groups.</figcaption>
+            </figure>
+                <small>our comfortable van</small>
+                <hr>
+            <figure>
+                <img alt="Our shuttle bus" src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Skybus_number_65_%285177AO%29_Scania_in_Wurundjeri_Way%2C_2013.JPG?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original" alt="Shuttle bus for shared passenger transport" width="800" height="533">
+                <figcaption><strong>Shuttle Bus</strong> - A practical option for comfortable shared trips.</figcaption>
+            </figure>
+                <small>our shuttle bus</small>
+                <hr>
+        </section>
+        <section id="map">
+            <h2>Find Our Stops</h2>
+            <p>Use the map below to find our service areas and nearby pick-up points:</p>
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=...&layer=mapnik&marker=LAT%2CLON" width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <p><a href="https://www.openstreetmap.org/" target="_blank" rel="noopener">View larger map</a></p>
+            <h3>Image Map: Route Overview</h3>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='260' viewBox='0 0 900 260'%3E%3Crect width='900' height='260' fill='%23f3f5f1'/%3E%3Cpath d='M145 140 C290 140 300 85 450 85 S620 145 755 145' fill='none' stroke='%230b6e69' stroke-width='12' stroke-linecap='round'/%3E%3Ccircle cx='145' cy='140' r='22' fill='%23f2a541' stroke='white' stroke-width='7'/%3E%3Ccircle cx='450' cy='85' r='22' fill='%23f2a541' stroke='white' stroke-width='7'/%3E%3Ccircle cx='755' cy='145' r='22' fill='%23f2a541' stroke='white' stroke-width='7'/%3E%3Ctext x='145' y='200' text-anchor='middle' font-family='Arial,sans-serif' font-size='24' font-weight='bold' fill='%23232b2b'%3ETerminal%3C/text%3E%3Ctext x='450' y='40' text-anchor='middle' font-family='Arial,sans-serif' font-size='24' font-weight='bold' fill='%23232b2b'%3ECity%20Hall%3C/text%3E%3Ctext x='755' y='205' text-anchor='middle' font-family='Arial,sans-serif' font-size='24' font-weight='bold' fill='%23232b2b'%3EAirport%3C/text%3E%3C/svg%3E" alt="Route overview connecting Terminal, City Hall, and Airport" width="900" height="260" usemap="#routemap">
+            <map name="routemap" id="routemap">
+                 <area shape="rect" coords="95,90,195,190" href="#schedule" alt="Terminal stop">
+                 <area shape="rect" coords="400,45,500,125" href="#schedule" alt="City Hall stop">
+                 <area shape="rect" coords="705,105,805,185" href="#schedule" alt="Airport stop">
+            </map>
+        </section>
+        <hr>
+        <section id="media">
+            <h2>Media</h2>
+            <h3>How Waypoint Works (Video)</h3>
+            <video width="480" controls poster="https://cdn.pixabay.com/video/2016/02/14/2165-155327596_tiny.jpg">
+                <source src="https://cdn.pixabay.com/video/2016/02/14/2165-155327596_large.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h3>Driver Announcement (Audio)</h3>
+            <audio controls>
+                <source src="driver-announcement.mp3" type="audio/mpeg">
+                <source src="driver-announcement.ogg" type="audio/ogg">
+                Your browser does not support the audio element.
+            </audio>
+            <h3>Watch on YouTube (Embedded)</h3>
+            <iframe src="https://www.youtube.com/embed/Y1jTEyb3wiI" title="Waypoint transportation video on YouTube" width="560" height="315" allowfullscreen></iframe>
+        </section>
+        <hr>
+        <section id="schedule">
+            <h2>Schedule</h2>
+            <p>Check our operating hours and service schedule:</p>
+            <table border="1" cellpadding="6" cellspacing="0">
+                <caption>Daily departures from Central Terminal</caption>
+                <thead>
+                    <tr>
+                        <th>Route</th>
+                        <th>Departure</th>
+                        <th>Arrival</th>
+                        <th>Fare</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Terminal to City Hall</td>
+                        <td>8:00 AM</td>
+                        <td>8:20 AM</td>
+                        <td>₱50</td>
+                    </tr>
+                    <tr>
+                        <td>Terminal to University</td>
+                        <td>8:30 AM</td>
+                        <td>8:55 AM</td>
+                        <td>₱60</td>
+                    </tr>
+                    <tr>
+                        <td>Terminal to Airport</td>
+                        <td>9:00 AM</td>
+                        <td>9:40 AM</td>
+                        <td>₱60</td>
+                    </tr>
+                    <tr>
+                        <td>Terminal to Public Market</td>
+                        <td>9:30 AM</td>
+                        <td>9:50 AM</td>
+                        <td>₱40</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Check Your Route</h3>
+            <method="get" action="#">
+                <label for="route-select">Select a route:</label>
+                <select id="route-select" name="route">
+                    <option value="">--Please choose a route--</option>
+                    <option value="terminal-cityhall">Terminal to City Hall</option>
+                    <option value="terminal-university">Terminal to University</option>
+                    <option value="terminal-airport">Terminal to Airport</option>
+                    <option value="terminal-market">Terminal to Public Market</option>
+                </select>
+            </method>
+        </section>
+        <hr>
+        <section id="contact">
+            <h2>Contact & Feedback</h2>
+            <form enctype="multipart/form-data">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <form action="#" method="post" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Send Feedback</legend>
+                    <p>
+                        <label for="feedback-name">Your name:</label>
+                        <input type="text" id="feedback-name" name="feedback-name" required>
+                    </p>
+                    <p>
+                        <label for="ride-rating">Rate your ride (1-5):</label>
+                        <input type="range" id="ride-rating" name="ride-rating" min="1" max="5" value="5">
+                    </p>
+                    <p>
+                        <label for="feedback-topic">Topic:</label>
+                        <select id="feedback-topic" name="feedback-topic">
+                            <option value="compliment">Compliment</option>
+                            <option value="complaint">Complaint</option>
+                            <option value="lost-item">Lost item</option>
+                            <option value="suggestion">Suggestion</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="feedback-message">Message:</label>
+                        <textarea id="feedback-message" name="feedback-message" rows="5" cols="40" required></textarea>
+                    </p>
+                    <p>
+                        <label for="feedback-photo">Attach a photo (optional):</label>
+                        <input type="file" id="feedback-photo" name="feedback-photo" accept="image/*">
+                    </p>
+                    <p>
+                        <button type="submit">Send Feedback</button>
+                    </p>
+                </fieldset>
+            </form>
+            <h3>Reach Us</h3>
+            <address>
+                <strong>Waypoint Transportation</strong><br>
+                123 Main Street, City, State 12345<br>
+                Phone: <a href="tel:+11234567890">+1 (123) 456-7890</a><br>
+                Email: <a href="mailto:someone@example.com">someone@example.com</a>
+            </address>
+        </section>
+        <hr>
+        <section id="links">
+            <h2>Useful Links</h2>
+            <ul>
+                <li><a href="https://www.openstreetmap.org/" target="_blank" rel="noopener">OpenStreetMap</a></li>
+                <li><a href="https://www.google.com/maps" target="_blank" rel="noopener">Google Maps</a></li>
+                <li><a href="https://www.facebook.com/Waypoint" target="_blank" rel="noopener">Facebook</a></li>
+                <li><a href="#top">Back to top</a></li>
+            </ul>
+        </section>
+        <section id="terms-info">
+            <h2>Terms and Conditions</h2>
+            <details>
+                <summary>Read the terms</summary>
+                    <ul>
+                        <li>All rides are subject to availability.</li>
+                        <li>Fares are calculated based on distance and time.</li>
+                        <li>Cancellation fees may apply.</li>
+                        <li>Passengers must adhere to safety guidelines.</li>
+            </details>
+        </section>
+    </main>
+    <footer>
+        <hr>
+        <p>&copy; 2026 Waypoint Transportation. All rights reserved.</p>
+    </footer>
+</body>
+</html>
